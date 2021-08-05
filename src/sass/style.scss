@@ -1,9 +1,17 @@
+// mixins
+@mixin fonts($s, $c, $f, $l, $w) {
+  font-size: $s;
+  color: $c;
+  font-family: $f, sans-serif;
+  line-height: $l;
+  font-weight: $w;
+}
 
 // brands section
 
 .brand {
   // padding: 140px 0;
-  &__row{
+  &__row {
     gap: 20px;
   }
   .card {
@@ -34,14 +42,13 @@
 
 // brands section
 
-
 // country section start
 
 #destinations {
   position: relative;
   margin: 30px auto 30px auto;
   .subheading {
-    font-family: "Poppins";
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -49,7 +56,7 @@
     color: #5e6282;
   }
   .heading-title {
-    font-family: "Volkhov";
+    font-family: 'Volkhov', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 50px;
@@ -75,7 +82,7 @@
         padding: 2rem 1rem !important;
         div {
           .mp-title {
-            font-family: "Poppins";
+            font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 500;
             font-size: 18px;
@@ -84,7 +91,7 @@
           }
         }
         .travel-day {
-          font-family: "Poppins";
+          font-family: 'Poppins', sans-serif;
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
@@ -106,4 +113,87 @@
   }
 }
 
-// country section start
+// country section end
+
+// contact section
+.contact {
+  padding: 120px 0;
+  &__wrap {
+    background: rgba(223, 215, 249, 0.2);
+    // opacity: 0.4;
+    padding: 80px 150px;
+    border-radius: 129px 20px 20px 20px;
+  }
+  &__title {
+    @include fonts(33px, #5e6282, 'Poppins', 54px, 600);
+    opacity: 1;
+  }
+  &__label{
+    position: relative;
+  }
+  &__input {
+    padding: 25px 60px;
+    width: 420px;
+    border-radius: 10px;
+    &::placeholder {
+      @include fonts(14px, #39425d, 'Montserrat', 17px, normal);
+    }
+  }
+
+  &__btn {
+    @include fonts(17px,#fff !important ,"Open Sans" ,23px ,normal );
+    background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+    border-radius: 10px;
+    padding: 22px 50px;
+  }
+  &__left{
+    position: absolute;
+    bottom: 0;
+    left: -80px;
+    z-index: -1;
+  }
+  &__right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &__svg{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+  &__send{
+    position: absolute;
+    top: -20px;
+    right: -10px;
+  }
+  &__absolute{
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    z-index: -1;
+  }
+}
+// media 
+@media (max-width:768px) {
+    .contact{
+      &__wrap{
+        padding: 80px 30px;
+      }
+      &__input{
+        width: 100% !important;
+      }
+      &__btn{
+        width: 100%;
+      }
+    }
+}
+@media (max-width:992px) {
+  .contact{
+    &__title{
+      @include fonts(18px, #39425d, 'Poppins', 25px, normal);
+    }
+  }
+}
+// contact section

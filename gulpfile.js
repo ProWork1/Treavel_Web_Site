@@ -122,6 +122,7 @@ function images() {
             mode:{
                 stack:{
                     sprite: "../icons/icons.svg",
+                    example: true
                 }
             },
         }
