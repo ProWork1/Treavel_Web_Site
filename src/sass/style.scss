@@ -1,3 +1,6 @@
+// imports
+@import "media";
+
 // mixins
 @mixin fonts($s, $c, $f, $l, $w) {
   font-size: $s;
@@ -175,25 +178,4 @@
     z-index: -1;
   }
 }
-// media 
-@media (max-width:768px) {
-    .contact{
-      &__wrap{
-        padding: 80px 30px;
-      }
-      &__input{
-        width: 100% !important;
-      }
-      &__btn{
-        width: 100%;
-      }
-    }
-}
-@media (max-width:992px) {
-  .contact{
-    &__title{
-      @include fonts(18px, #39425d, 'Poppins', 25px, normal);
-    }
-  }
-}
-// contact section
+
