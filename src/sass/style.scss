@@ -38,6 +38,8 @@
 // country section start
 
 #destinations {
+  position: relative;
+  margin: 30px auto 30px auto;
   .subheading {
     font-family: "Poppins";
     font-style: normal;
@@ -98,8 +100,8 @@
   }
   .decore {
     position: absolute;
-    right: 85px;
-    top: 310px;
+    right: 0;
+    top: 340px;
     z-index: -1;
   }
 }
